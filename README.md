@@ -11,6 +11,7 @@ Also I want to not depend on Unity, Godot and Unreal Engine.
 
 so I decided to start developing a game from scratch, just with C++, OpenGL and any audio library (this is a problem of the future :D).
 
+## Approach
 I have approached this project in a form of "loop iterations", in which I ask: What is the minimum that I have to implement in this iteration to actually see an upgrade from the last one?
 And start a new project from scratch that replicates the functionality and implements the new functionality I want to implement.
 
@@ -40,6 +41,7 @@ which I liked, and I think I will use from now.
 
 I am not following any tutorial that teaches me how to implement the features and how to structure the code. I am just flowing and doing what I feel that I have to do, and since I am doing it in short iterations, if I make a mistake and I realize too late about it, I can continue to finish the current iteration with it and be more aware on the next iteration. 
 
+## Project structure
 To actually develop a game engine, I am aware of two structures: Unity-like project structure, and what I have called "it just works" project structure.
 
 In the Unity-like structure, everything inside a scene is a "game object", which can have "game components" and nested game objects. Game components are what give the functionality to game objects (physics, collissions, sprite rendering, animations, custom behaviour scripts...). For this approach, because everything is generalized, internally, in the current scene, you will have just a list of game objects with game components that will have an update function that will be called once per frame (in a general case). 
@@ -50,6 +52,7 @@ The benefit of the Unity-like structure is that, because everything is generaliz
 On the other hand, the Unity-like sturcture require the developers to implement a lot of very complex functionality just to be able to start making the game, which is a little bit overkill for small projects, and can be very frustrating to do if you do not know exactly what you are doing (like me).
 This is why, for now, I chose to use the "it just works" structure.
 
+## More info of the already done iterations & plans for the future
 On the first iteration, (Camera, Player, hablar de los bordes...)
 
 On the second iteration, (No borders, ground (floor) boxes, collissions, lista con floorBoxes que tengo que recorrer siempre)
@@ -57,3 +60,7 @@ On the second iteration, (No borders, ground (floor) boxes, collissions, lista c
 My plans for the third iteration are (Switching between multiple scenes, tile ground level (no tengo que recorrer la lista en cada frame)).
 
 My plans after that are to implement support for animations, and then implement audio.
+
+## Building the iterations
+To compile the projects, go to their respective folder. You will find detailed instructuions in their README.
+Also, this project is thought to be ran on Linux only, since I feel more comfrtable coding on it than on Windows. I don't have any short-term plan of porting the projects to Windows because they are for personal educational purposes. Apologies.
