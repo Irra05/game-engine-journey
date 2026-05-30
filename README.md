@@ -53,7 +53,7 @@ On the other hand, the Unity-like sturcture require the developers to implement 
 This is why, for now, I chose to use the "it just works" structure.
 
 ## More info of the already done iterations & plans for the future
-On the first iteration, (Camera, Player, hablar de los bordes...)
+On the first iteration, I setup a callback function that reads the keyboard input and sets or clears some global flags, one for each needed key (A, D and space bar), a player struct with coordinates, an enum attribute to track if it is grounded or not and an update method that is called once every frame and updates the coordinates based on the value of the deltaTime variable (the time between a frame and the next), the air status and the keyboard flags. For the horizontal movement, it just increments or decrements the position of the player at a fixed speed if the A or the D are pressed, and for the vertical movement, it uses some implementation of the uniformly accelerated straight movement that we all learnt in the high school. It will keep moving until the respective flag is cleared or the player object hits a border. After that, a camera object is updated to follow the horizontal movement of the player. To draw everything on the screen, I just drew a red rectangle in the coordinates where the player is supposed to be, and coloured rectangles to show the ground so it does not look like it is floating when it is grounded.
 
 On the second iteration, (No borders, ground (floor) boxes, collissions, lista con floorBoxes que tengo que recorrer siempre)
 
@@ -62,5 +62,5 @@ My plans for the third iteration are (Switching between multiple scenes, tile gr
 My plans after that are to implement support for animations, and then implement audio.
 
 ## Building the iterations
-To compile the projects, go to their respective folder. You will find detailed instructuions in their README.
-Also, this project is thought to be ran on Linux only, since I feel more comfrtable coding on it than on Windows. I don't have any short-term plan of porting the projects to Windows because they are for personal educational purposes. Apologies.
+To compile the projects, go to their respective folder. You will find detailed instructuions in their README, but generally, they will be: install Freeglut, GLEW, GLFW, the Mesa drivers and all its dependencies and run "make".
+Also, this project is thought to be compiled and ran on Linux only, since I feel more comfrtable coding on it than on Windows. I don't have any short-term plan of porting the projects to Windows because they are for personal educational purposes. Apologies for that.
